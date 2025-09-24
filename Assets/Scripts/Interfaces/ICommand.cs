@@ -1,4 +1,6 @@
-public interface ICommand{
-    void Execute();
-    void Undo();
+namespace Interfaces {
+    public interface ICommand{
+        void Execute();
+        void Undo();
+    }
 }

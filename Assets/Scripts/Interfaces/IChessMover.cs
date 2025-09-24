@@ -1,9 +1,11 @@
 using System.Collections.Generic;
-using Assets.Scripts.Entities.Base;
+using Entities.Base;
 
-public interface IChessMover
-{
-    IEnumerable<PositionOnGrid> AvaliableMoves(PositionOnGrid position);
+namespace Interfaces {
+    public interface IChessMover
+    {
+        IEnumerable<PositionOnGrid> AvaliableMoves(PositionOnGrid position);
+    }
 }
 
 

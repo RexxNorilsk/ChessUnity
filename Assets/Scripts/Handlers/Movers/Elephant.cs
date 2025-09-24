@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
-using Assets.Scripts.Entities.Base;
+using Interfaces;
+using Entities.Base;
 
 public class Elephant : IChessMover {
     
