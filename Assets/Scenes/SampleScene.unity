@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 778428183}
   - component: {fileID: 778428182}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -662,9 +662,9 @@ GameObject:
   - component: {fileID: 1717469219}
   - component: {fileID: 1717469220}
   m_Layer: 0
-  m_Name: Controller
+  m_Name: Controllers
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -677,7 +677,7 @@ Transform:
   m_GameObject: {fileID: 1717469218}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -702,6 +702,10 @@ MonoBehaviour:
   _gridMaterials:
   - {fileID: 2100000, guid: 2bccd1d9e08f11c48bc389b4eb056207, type: 2}
   - {fileID: 2100000, guid: bfdc86bddceaf0a43af96fa7981f8595, type: 2}
+  _timelineSpread: 0.6
+  _animationDuration: 2
+  _controlPointHeight: 0.85
+  _waveAmplitude: 0.05
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
