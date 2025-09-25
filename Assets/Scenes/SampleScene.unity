@@ -661,6 +661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1717469219}
   - component: {fileID: 1717469220}
+  - component: {fileID: 1717469221}
   m_Layer: 0
   m_Name: Controllers
   m_TagString: Untagged
@@ -706,6 +707,21 @@ MonoBehaviour:
   _animationDuration: 2
   _controlPointHeight: 0.85
   _waveAmplitude: 0.05
+--- !u!114 &1717469221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717469218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 033f7bf93a9d28e4b82e3e02a887cef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fxPrefabs:
+  - type: 0
+    prefab: {fileID: 526473164573358776, guid: 16105ac397a3c1d41a79fdd9360bb025, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
