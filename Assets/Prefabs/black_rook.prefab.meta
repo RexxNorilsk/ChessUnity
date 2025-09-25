@@ -10,5 +10,5 @@ AssetOrigin:
   productId: 294463
   packageName: 3D voxel Chess Pack
   packageVersion: 1.0
-  assetPath: Assets/Chess_pack/Prefab/black_rook.prefab
+  assetPath: Assets/Prefabs/black_rook.prefab
   uploadId: 688282
