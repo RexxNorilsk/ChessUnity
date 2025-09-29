@@ -22,5 +22,12 @@ namespace Entities.Base {
             King,
             Horse,
         }
+
+
+        public void SetType(FigureType type, Material material) {
+            GetComponent<MeshFilter>().mesh = FiguresPrefabs.Find(x => x.type == type).prefab;
+            GetComponent<Renderer>().material = material;
+        }
+
     }
 }

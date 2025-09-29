@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System;
 
 namespace Controllers {
 
@@ -22,21 +23,27 @@ namespace Controllers {
         private float _animationProgress = 0f;
         private bool _isAnimating = true;
 
+        private Action _callbackInit;
+
         private List<GameObject> _gridCells = new List<GameObject>();
 
         public void Awake() {
             if(Instance == null) Instance = this;
             else Destroy(gameObject);
-        }
-
-        public void Start() {
-            Init();
             _animationProgress = 0f;
         }
 
-        public void Init() {
-            _gridCells.Clear();
+        public Transform GetGridTransform() {
+            return _gridTransform;
+        }
 
+        public Vector3 GetCellPosition(int x, int z) {
+            return _gridCells[x * _gridSize + z].transform.localPosition;
+        }
+
+        public void Init(Action callback) {
+            _gridCells.Clear();
+            _callbackInit = callback;
             for(int i = 0; i < _gridSize; i++) {
                 for(int j = 0; j < _gridSize; j++) {
                     GameObject cell = Instantiate(_prefabPlace, _gridTransform);
@@ -51,13 +58,21 @@ namespace Controllers {
 
         public void Update() {
             if (_isAnimating) AnimateGrid();
+            else if (_callbackInit != null) {
+                _callbackInit.Invoke();
+                _callbackInit = null;
+            }
+        }
+
+        private void SetAnimationStatus(bool isAnimating) {
+            _isAnimating = isAnimating;
         }
 
         public void AnimateGrid() {
             _animationProgress += Time.deltaTime / Mathf.Max(0.0001f, _animationDuration);
             if (_animationProgress >= 1f) {
                 _animationProgress = 1f;
-                _isAnimating = false;
+                SetAnimationStatus(false);
 
                 for (int i = 0; i < _gridCells.Count; i++) {
                     int x = i % _gridSize;

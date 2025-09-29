@@ -662,6 +662,7 @@ GameObject:
   - component: {fileID: 1717469219}
   - component: {fileID: 1717469220}
   - component: {fileID: 1717469221}
+  - component: {fileID: 1717469222}
   m_Layer: 0
   m_Name: Controllers
   m_TagString: Untagged
@@ -722,6 +723,23 @@ MonoBehaviour:
   _fxPrefabs:
   - type: 0
     prefab: {fileID: 526473164573358776, guid: 16105ac397a3c1d41a79fdd9360bb025, type: 3}
+--- !u!114 &1717469222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717469218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8bb4aa8405774c4d8ac822b930741d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _figurePrefab: {fileID: 6317685577972335932, guid: d1621d1bcea196040a292611a0012d01, type: 3}
+  _figureOffset: {x: 0.17, y: 0.003, z: -0.17}
+  _animationStep: 0.1
+  _whiteMaterial: {fileID: 2100000, guid: 4ab30d3b2776d2e4492b8793e54933ce, type: 2}
+  _blackMaterial: {fileID: 2100000, guid: 7293dd7fdc1a2cc498ea099438eaffb6, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
